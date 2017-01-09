@@ -1,29 +1,21 @@
-angular.module('demobs', ['ngRoute', 'ngui'])
-    .config(function ($routeProvider, $locationProvider) {
+angular.module('demo', ['ngRoute', 'ngui'])
+    .config(function($routeProvider, $locationProvider) {
         $routeProvider
-            .when('/home', {
+            .when('/', {
                 templateUrl: '/demo/view.html',
-                controller: HtmltextCtrl,
+                controller: function($scope) {
+                    $scope.text = "helloo World";
+                },
                 page: 'htmltext'
             });
 
         //$locationProvider.html5Mode(true);
     })
-    .run(['$rootScope', '$route', function ($rootScope, $route) {
 
-        $rootScope.$on('$routeChangeSuccess', function () {
-            $rootScope.$pageName = document.title = $route.current.page;
-        });
-
-
-    }])
-    ;
 ;
 
 angular.module('ngui', [
     'ngui-htmltext',
 ])
-    .config(function ($logProvider) {
-        $logProvider.debugEnabled(true);
-    });
+
 ;

@@ -15,8 +15,8 @@
     "tests"
   ],
   "dependencies": {
-    "angular-cookies": "1.5.7",
-    "angular-route": "^1.5.7",
+    "angular-cookies": "1.5.8",
+    "angular-route": "^1.5.8",
     "ckeditor": "^4.5.9"
   }
 }
